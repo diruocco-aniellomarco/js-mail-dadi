@@ -14,17 +14,19 @@ button.addEventListener('click', function() {
 
     if (user == computer) {
         risultato ='PAREGGIO';
+        risultatoSfida.classList.remove('text-danger');
+        risultatoSfida.classList.remove('text-success');
     }
     if (user > computer) {
         risultato ='HAI VINTO';
+        risultatoSfida.classList.add('text-success');
+        risultatoSfida.classList.remove('text-danger');
     }
     if (user < computer) {
         risultato ='HAI PERSO';
+        risultatoSfida.classList.add('text-danger');
+        risultatoSfida.classList.remove('text-success');
     } 
-
-    // let risultato = 'PAREGGIO'
-    
-    // risultato = (user > computer) ? 'HAI VINTO' : 'HAI PERSO';
 
     console.log(risultato);
 
